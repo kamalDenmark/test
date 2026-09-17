@@ -1,7 +1,7 @@
 import { db } from "../tools/db.js";
 
 export function getStudents() {
-  //getting all students from students table
+  //getting all students from students
   return db.prepare("select id, name, marks from students; ").all();
 }
 export function getStudent(sid) {
