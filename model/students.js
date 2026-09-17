@@ -1,9 +1,11 @@
 import { db } from "../tools/db.js";
 
 export function getStudents() {
+  //getting all students from students
   return db.prepare("select id, name, marks from students; ").all();
 }
 export function getStudent(sid) {
+  //comment added in getStudent
   return db
     .prepare("select id, name, marks, fileId from students where id = ?; ")
     .get(sid);
