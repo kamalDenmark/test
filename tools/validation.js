@@ -3,6 +3,8 @@ export function required(name, value) {
 }
 export function minLength(min) {
   //returning a function
+  //returning function has 2 parameters
+
   return (name, value) => {
     if (value.length < min) {
       return `'${name}' must have at least ${min} characters.`;
