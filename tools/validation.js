@@ -2,6 +2,7 @@ export function required(name, value) {
   if (!value) return `${name} is a required field.`;
 }
 export function minLength(min) {
+  //returning a function
   return (name, value) => {
     if (value.length < min) {
       return `'${name}' must have at least ${min} characters.`;
